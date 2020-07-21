@@ -19,21 +19,6 @@ def update_constants():
     const_file.close()
 
 
-def main_float_input(message):
-    """
-    Takes message to print when asking for input, the converts to float.
-    Repeats user input until it can be converted to float without error.
-    Returns that float once done.
-    """
-    user_input = input(message)
-    while True:
-        try:
-            x = float(user_input)
-            return x
-        except ValueError:
-            user_input = input("Not a valid input, try again: ")
-
-
 def protein_carbs_fats(cal, lbs):
     """
     Given calories and lbs, using global values returns list of macro grams, 
@@ -60,10 +45,23 @@ def protein_carbs_fats(cal, lbs):
     pcf_dict = {"protein": protein, "carbohydrates": carbs, "fats": fats}
     return pcf_dict
 
+def main_float_input(message):
+    """
+    Takes message to print when asking for input, the converts to float.
+    Repeats user input until it can be converted to float without error.
+    Returns that float once done.
+    """
+    user_input = input(message)
+    while True:
+        try:
+            x = float(user_input)
+            return x
+        except ValueError:
+            user_input = input("Not a valid input, try again: ")
 
 
+update_constants()
 while True:
-    update_constants()
     print("1. Calculate Macros")
     print("2. Edit Constants")
     print("3. Exit")
@@ -79,6 +77,7 @@ while True:
                             f"Total daily fats: {p_c_f_dict['fats']}\n"
             print(macro_message)
     elif user_input == "2":
+        update_constants()
         break
     elif user_input == "3":
         break
