@@ -35,31 +35,31 @@ def test_if_num(x):
         return False
 
 
-def protein_carbs_fats(cal, lbs, protein_per_lb, min_fat_per_lb, fat_percentage):
+def protein_carbs_fats(cal, lbs):
     """
-    Given calories, lbs, protein_per_lb, min_fat_per_lb, and desired fat_percentage,
-    returns list of macro grams, in order from protein, carbs, and fats.
+    Given calories and lbs, using global values returns list of macro grams, 
+    in order from protein, carbs, and fats.
         >>> protein_carbs_fats(2500, 150)
         [135.0, 302.5, 83.33333333333333]
     """
-    protein = lbs * protein_per_lb
-    min_fats = lbs * min_fat_per_lb
+    protein = lbs * PROTEIN_PER_LB
+    min_fats = lbs * MIN_FAT_PER_LB
     if (protein * 4) + (min_fats * 9) > cal:
         print("Not enough calories for minimum protein and fats")
         return -1
     else:
-        if min_fats * 9 > (fat_percentage * cal):
+        if min_fats * 9 > (FAT_PERCENTAGE * cal):
             fats = min_fats
             cal -= protein * 4
             cal -= fats * 9
             carbs = cal/4
         else:
-            fats = (cal * fat_percentage)/9
+            fats = (cal * FAT_PERCENTAGE)/9
             cal -= protein * 4
             cal -= fats * 9
             carbs = cal/4
-    pcf = [protein, carbs, fats]
-    return pcf
+    pcf_dict = {"protein": protein, "carbohydrates": carbs, "fats": fats}
+    return pcf_dict
 
 
 while True:
@@ -85,12 +85,12 @@ while True:
             else:
                 user_input = input("Not a valid input, try again: ")
 
-        p_c_f_list = protein_carbs_fats(calories, weight, PROTEIN_PER_LB, MIN_FAT_PER_LB, FAT_PERCENTAGE)
-        if p_c_f_list != -1:
+        p_c_f_dict = protein_carbs_fats(calories, weight)
+        if p_c_f_dict != -1:
             macro_message = f"Total daily calories: {calories}\n"   \
-                            f"Total daily protein: {p_c_f_list[0]}\n"   \
-                            f"Total daily carbs: {p_c_f_list[1]}\n" \
-                            f"Total daily fats: {p_c_f_list[2]}\n"
+                            f"Total daily protein: {p_c_f_dict['protein']}\n"   \
+                            f"Total daily carbs: {p_c_f_dict['carbohydrates']}\n" \
+                            f"Total daily fats: {p_c_f_dict['fats']}\n"
             print(macro_message)
     elif user_input == "2":
         break
