@@ -19,20 +19,19 @@ def update_constants():
     const_file.close()
 
 
-def test_if_num(x):
+def main_float_input(message):
     """
-    Validates user input by checking if parameter x is a int, float, or
-    a other data type that can be directly converted to a float.
-        >>> test_if_num(5)
-        True
-        >>> test_if_num("Five")
-        False
+    Takes message to print when asking for input, the converts to float.
+    Repeats user input until it can be converted to float without error.
+    Returns that float once done.
     """
-    try:
-        x = float(x)
-        return True
-    except ValueError:
-        return False
+    user_input = input(message)
+    while True:
+        try:
+            x = float(user_input)
+            return x
+        except ValueError:
+            user_input = input("Not a valid input, try again: ")
 
 
 def protein_carbs_fats(cal, lbs):
@@ -62,6 +61,7 @@ def protein_carbs_fats(cal, lbs):
     return pcf_dict
 
 
+
 while True:
     update_constants()
     print("1. Calculate Macros")
@@ -69,22 +69,8 @@ while True:
     print("3. Exit")
     user_input = input("Please choose an option: ")
     if user_input == "1":
-        user_input = input("Please enter your daily calories: ")
-        while True:
-            if test_if_num(user_input):
-                calories = float(user_input)
-                break
-            else:
-                user_input = input("Not a valid input, try again: ")
-
-        user_input = input("Please enter your weight: ")
-        while True:
-            if test_if_num(user_input):
-                weight = float(user_input)
-                break
-            else:
-                user_input = input("Not a valid input, try again: ")
-
+        calories = main_float_input("Please enter your daily calories: ")
+        weight = main_float_input("Please enter your weight: ")
         p_c_f_dict = protein_carbs_fats(calories, weight)
         if p_c_f_dict != -1:
             macro_message = f"Total daily calories: {calories}\n"   \
