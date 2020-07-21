@@ -23,13 +23,16 @@ def protein_carbs_fats(cal, lbs):
     """
     Given calories and lbs, using global values returns list of macro grams, 
     in order from protein, carbs, and fats.
+        >>> PROTEIN_PER_LB = 0.9
+        >>> MIN_FAT_PER_LB = 0.45
+        >>> FAT_PERCENTAGE = 0.30
         >>> protein_carbs_fats(2500, 150)
-        [135.0, 302.5, 83.33333333333333]
+        {'protein': 135.0, 'carbohydrates': 302.5, 'fats': 83.33333333333333}
     """
     protein = lbs * PROTEIN_PER_LB
     min_fats = lbs * MIN_FAT_PER_LB
     if (protein * 4) + (min_fats * 9) > cal:
-        print("Not enough calories for minimum protein and fats")
+        print("Not enough calories allocated for minimum protein and fats")
         return -1
     else:
         if min_fats * 9 > (FAT_PERCENTAGE * cal):
