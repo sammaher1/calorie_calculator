@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31318bf5-808f-4300-abb8-0052efab1d3b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/CalorieCalculator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CalorieCalculator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +38,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -81,6 +84,9 @@
       <workItem from="1590815197966" duration="417000" />
       <workItem from="1593986593998" duration="4814000" />
       <workItem from="1594160579915" duration="972000" />
+      <workItem from="1595394545349" duration="793000" />
+      <workItem from="1595403247468" duration="367000" />
+      <workItem from="1595403631771" duration="161000" />
     </task>
     <servers />
   </component>
@@ -88,33 +94,42 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1381" y="579" key="#Notifications" timestamp="1595403261727">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1381" y="579" key="#Notifications/0.0.2560.1400/2560.260.1920.1040@0.0.2560.1400" timestamp="1595403261727" />
+    <state x="1176" y="452" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1595403204096">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1176" y="452" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2560.1400/2560.260.1920.1040@0.0.2560.1400" timestamp="1595403204096" />
     <state x="3205" y="650" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588575200404">
       <screen x="2560" y="260" width="1920" height="1040" />
     </state>
     <state x="3205" y="650" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/2560.260.1920.1040@2560.260.1920.1040" timestamp="1588575200404" />
-    <state x="3039" y="589" key="FileChooserDialogImpl" timestamp="1590358658896">
-      <screen x="2560" y="260" width="1920" height="1040" />
+    <state x="639" y="443" key="FileChooserDialogImpl" timestamp="1595403388827">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
+    <state x="639" y="443" key="FileChooserDialogImpl/0.0.2560.1400/2560.260.1920.1040@0.0.2560.1400" timestamp="1595403388827" />
     <state x="3039" y="589" key="FileChooserDialogImpl/0.0.2560.1400/2560.260.1920.1040@2560.260.1920.1040" timestamp="1590358658896" />
-    <state width="1362" height="312" key="GridCell.Tab.0.bottom" timestamp="1588578580600">
-      <screen x="2560" y="260" width="1920" height="1040" />
+    <state width="1340" height="252" key="GridCell.Tab.0.bottom" timestamp="1595403218610">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1362" height="252" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.260.1920.1040@0.0.2560.1400" timestamp="1583478389879" />
+    <state width="1340" height="252" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.260.1920.1040@0.0.2560.1400" timestamp="1595403218610" />
     <state width="1362" height="312" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.260.1920.1040@2560.260.1920.1040" timestamp="1588578580600" />
-    <state width="1362" height="312" key="GridCell.Tab.0.center" timestamp="1588578580600">
-      <screen x="2560" y="260" width="1920" height="1040" />
+    <state width="1340" height="252" key="GridCell.Tab.0.center" timestamp="1595403218610">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1362" height="252" key="GridCell.Tab.0.center/0.0.2560.1400/2560.260.1920.1040@0.0.2560.1400" timestamp="1583478389879" />
+    <state width="1340" height="252" key="GridCell.Tab.0.center/0.0.2560.1400/2560.260.1920.1040@0.0.2560.1400" timestamp="1595403218610" />
     <state width="1362" height="312" key="GridCell.Tab.0.center/0.0.2560.1400/2560.260.1920.1040@2560.260.1920.1040" timestamp="1588578580600" />
-    <state width="1362" height="312" key="GridCell.Tab.0.left" timestamp="1588578580600">
-      <screen x="2560" y="260" width="1920" height="1040" />
+    <state width="1340" height="252" key="GridCell.Tab.0.left" timestamp="1595403218610">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1362" height="252" key="GridCell.Tab.0.left/0.0.2560.1400/2560.260.1920.1040@0.0.2560.1400" timestamp="1583478389879" />
+    <state width="1340" height="252" key="GridCell.Tab.0.left/0.0.2560.1400/2560.260.1920.1040@0.0.2560.1400" timestamp="1595403218610" />
     <state width="1362" height="312" key="GridCell.Tab.0.left/0.0.2560.1400/2560.260.1920.1040@2560.260.1920.1040" timestamp="1588578580600" />
-    <state width="1362" height="312" key="GridCell.Tab.0.right" timestamp="1588578580600">
-      <screen x="2560" y="260" width="1920" height="1040" />
+    <state width="1340" height="252" key="GridCell.Tab.0.right" timestamp="1595403218610">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1362" height="252" key="GridCell.Tab.0.right/0.0.2560.1400/2560.260.1920.1040@0.0.2560.1400" timestamp="1583478389879" />
+    <state width="1340" height="252" key="GridCell.Tab.0.right/0.0.2560.1400/2560.260.1920.1040@0.0.2560.1400" timestamp="1595403218610" />
     <state width="1362" height="312" key="GridCell.Tab.0.right/0.0.2560.1400/2560.260.1920.1040@2560.260.1920.1040" timestamp="1588578580600" />
     <state width="1362" height="312" key="GridCell.Tab.1.bottom" timestamp="1588578580600">
       <screen x="2560" y="260" width="1920" height="1040" />
@@ -132,13 +147,16 @@
       <screen x="2560" y="260" width="1920" height="1040" />
     </state>
     <state width="1362" height="312" key="GridCell.Tab.1.right/0.0.2560.1400/2560.260.1920.1040@2560.260.1920.1040" timestamp="1588578580600" />
+    <state x="997" y="361" key="SettingsEditor" timestamp="1595403792307">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="997" y="361" key="SettingsEditor/0.0.2560.1400/2560.260.1920.1040@0.0.2560.1400" timestamp="1595403792307" />
     <state x="3620" y="767" key="com.intellij.ide.util.TipDialog" timestamp="1588549349074">
       <screen x="2560" y="260" width="1920" height="1040" />
     </state>
-    <state x="1413" y="683" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/2560.260.1920.1040@0.0.2560.1400" timestamp="1584160621780" />
     <state x="3620" y="767" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/2560.260.1920.1040@2560.260.1920.1040" timestamp="1588549349074" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CalorieCalculator$main.coverage" NAME="main Coverage Results" MODIFIED="1590200586870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CalorieCalculator$main.coverage" NAME="main Coverage Results" MODIFIED="1595403795154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
