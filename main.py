@@ -5,18 +5,41 @@ FAT_PERCENTAGE = 0
 
 def update_constants():
     """
-    Updates global variables by reading constant.txt
+    Refreshes global variables by reading constant.txt
     and setting variables equal to read values.
     """
     global PROTEIN_PER_LB
     global MIN_FAT_PER_LB
     global FAT_PERCENTAGE
-    const_file = open("constant.txt", 'r')
-    const_list = const_file.readlines()
+    with open('constant.txt', 'r') as const_file:
+        const_list = const_file.readlines()
     PROTEIN_PER_LB = float(const_list[1])
     MIN_FAT_PER_LB = float(const_list[3])
     FAT_PERCENTAGE = float(const_list[5])
     const_file.close()
+
+
+def write_constants(protein_per_lb=False, min_fat_per_lb=False, fat_percentage=False):
+    """
+    Changes values constant.txt to new values given by parameters,
+    then calls update_constants() to refresh global variables.
+    If a field is empty it ignores that value and does not update it.
+        >>> PROTEIN_PER_LB = 0.9
+        >>> write_constants(0.3)
+        >>> PROTEIN_PER_LB
+        0.3
+    """
+    with open('constant.txt', 'r') as const_file:
+        new_data = const_file.readlines()
+    if protein_per_lb:
+        new_data[1] = str(protein_per_lb) + '\n'
+    if min_fat_per_lb:
+        new_data[3] = str(min_fat_per_lb) + '\n'
+    if fat_percentage:
+        new_data[5] = str(fat_percentage) + '\n'
+    with open('constant.txt', 'w') as const_file:
+        const_file.writelines(new_data)
+    update_constants()
 
 
 def protein_carbs_fats(cal, lbs):
@@ -47,6 +70,7 @@ def protein_carbs_fats(cal, lbs):
             carbs = cal/4
     pcf_dict = {"protein": protein, "carbohydrates": carbs, "fats": fats}
     return pcf_dict
+
 
 def main_float_input(message):
     """
@@ -80,8 +104,26 @@ while True:
                             f"Total daily fats: {p_c_f_dict['fats']}\n"
             print(macro_message)
     elif user_input == "2":
-        update_constants()
-        break
+        done = False
+        while not done:
+            print("1. Protein per pound")
+            print("2. Minimum fats per pound")
+            print("3. Desired fats as percentage of calories")
+            print("4. Return to Main Menu")
+            user_input = input('Please choose an option: ')
+            if user_input == '1':
+                value = main_float_input('Please enter desired grams of protein per lb (recommended: 0.9): ')
+                write_constants(value)
+            elif user_input == '2':
+                value = main_float_input('Please enter minimum grams of fat per lb (recommended: 0.45): ')
+                write_constants(False, value)
+            elif user_input == '3':
+                value = main_float_input('Please enter desired percentage of calories from fat (recommended: 0.3): ')
+                write_constants(False, False, value)
+            elif user_input == '4':
+                break
+            else:
+                print('Invalid Selection, please try again')
     elif user_input == "3":
         break
     else:
