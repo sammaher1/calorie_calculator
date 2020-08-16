@@ -78,13 +78,13 @@ def main_float_input(message):
     Repeats user input until it can be converted to float without error.
     Returns that float once done.
     """
-    user_input = input(message)
+    try_input = input(message)
     while True:
         try:
-            x = float(user_input)
+            x = float(try_input)
             return x
         except ValueError:
-            user_input = input("Not a valid input, try again: ")
+            try_input = input("Not a valid input, try again: ")
 
 
 update_constants()
@@ -102,13 +102,12 @@ while True:
                             f"Total daily protein: {p_c_f_dict['protein']}\n"   \
                             f"Total daily carbs: {p_c_f_dict['carbohydrates']}\n" \
                             f"Total daily fats: {p_c_f_dict['fats']}\n"
-            print(macro_message)
+            print('\n' + macro_message)
     elif user_input == "2":
-        done = False
-        while not done:
-            print("1. Protein per pound")
-            print("2. Minimum fats per pound")
-            print("3. Desired fats as percentage of calories")
+        while True:
+            print("\n1. Grams of protein per pound" + ' (Current: ' + str(PROTEIN_PER_LB) + ')')
+            print("2. Minimum grams fat per pound" + ' (Current: ' + str(MIN_FAT_PER_LB) + ')')
+            print("3. Desired fat as percentage of calories" + ' (Current: ' + str(FAT_PERCENTAGE) + ')')
             print("4. Return to Main Menu")
             user_input = input('Please choose an option: ')
             if user_input == '1':
@@ -121,6 +120,7 @@ while True:
                 value = main_float_input('Please enter desired percentage of calories from fat (recommended: 0.3): ')
                 write_constants(False, False, value)
             elif user_input == '4':
+                print()
                 break
             else:
                 print('Invalid Selection, please try again')
